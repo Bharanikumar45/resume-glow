@@ -12,9 +12,15 @@ const blankResume: ResumeData = {
   summary: "",
   education: [],
   skills: [],
+  hardSkills: [],
+  softSkills: [],
+  languages: [],
   experience: [],
   projects: [],
   certifications: [],
+  leadership: [],
+  extracurricular: [],
+  achievements: [],
 };
 import { exportResumePdf } from "@/lib/export-pdf";
 import bkvsLogo from "@/assets/bkvs-logo.png";
