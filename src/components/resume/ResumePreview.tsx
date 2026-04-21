@@ -1,5 +1,5 @@
 import { forwardRef } from "react";
-import { Mail, Phone, MapPin, Linkedin as LinkedinIcon, Globe, User } from "lucide-react";
+import { Mail, Phone, MapPin, Link2, Globe, User } from "lucide-react";
 import type { ResumeData } from "@/lib/resume-types";
 
 interface Props {
@@ -121,7 +121,7 @@ export const ResumePreview = forwardRef<HTMLDivElement, Props>(({ data }, ref) =
           {personal.phone && <ContactRow icon={<Phone size={10} />} text={personal.phone} />}
           {personal.email && <ContactRow icon={<Mail size={10} />} text={personal.email} />}
           {personal.location && <ContactRow icon={<MapPin size={10} />} text={personal.location} />}
-          {personal.linkedin && <ContactRow icon={<LinkedinIcon size={10} />} text={personal.linkedin} />}
+          {personal.linkedin && <ContactRow icon={<Link2 size={10} />} text={personal.linkedin} />}
           {personal.portfolio && <ContactRow icon={<Globe size={10} />} text={personal.portfolio} />}
         </div>
 
