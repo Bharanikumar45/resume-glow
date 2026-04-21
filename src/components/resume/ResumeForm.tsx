@@ -1,10 +1,12 @@
 import { useRef } from "react";
-import { Plus, Trash2, Upload, X } from "lucide-react";
+import { Plus, Trash2, Upload, X, Target } from "lucide-react";
 import type { ResumeData } from "@/lib/resume-types";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import { SkillsAdvisor } from "@/components/resume/SkillsAdvisor";
+import { SUGGESTED_ROLES } from "@/lib/skills-advisor";
 
 interface Props {
   data: ResumeData;
@@ -35,6 +37,31 @@ export function ResumeForm({ data, setData }: Props) {
 
   return (
     <div className="space-y-6">
+      {/* Target Position */}
+      <Card title="Target Position" hint="Tell us the role you're applying for">
+        <div className="flex items-start gap-3">
+          <div className="w-10 h-10 rounded-xl gradient-primary flex items-center justify-center shrink-0">
+            <Target className="w-5 h-5 text-white" />
+          </div>
+          <div className="flex-1">
+            <Input
+              list="role-suggestions"
+              placeholder="e.g. Frontend Developer, Data Scientist, DevOps Engineer"
+              value={data.targetPosition}
+              onChange={(e) => setData((d) => ({ ...d, targetPosition: e.target.value }))}
+            />
+            <datalist id="role-suggestions">
+              {SUGGESTED_ROLES.map((r) => (
+                <option key={r} value={r.replace(/\b\w/g, (l) => l.toUpperCase())} />
+              ))}
+            </datalist>
+            <p className="text-xs text-muted-foreground mt-1.5">
+              We'll check if your skills match and suggest courses if you need more.
+            </p>
+          </div>
+        </div>
+      </Card>
+
       {/* Personal */}
       <Card title="Personal Information">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -153,6 +180,9 @@ export function ResumeForm({ data, setData }: Props) {
             }
           }}
         />
+        <div className="mt-4">
+          <SkillsAdvisor targetPosition={data.targetPosition} skills={data.skills} />
+        </div>
       </Card>
 
       {/* Experience */}

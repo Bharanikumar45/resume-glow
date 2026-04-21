@@ -10,12 +10,12 @@ import { exportResumePdf } from "@/lib/export-pdf";
 export const Route = createFileRoute("/builder")({
   head: () => ({
     meta: [
-      { title: "Resume Builder — LumeCV" },
+      { title: "Resume Builder — BKVS" },
       {
         name: "description",
         content: "Build your ATS-friendly resume with live preview and instant PDF export.",
       },
-      { property: "og:title", content: "Resume Builder — LumeCV" },
+      { property: "og:title", content: "Resume Builder — BKVS" },
       {
         property: "og:description",
         content: "Live preview, smart formatting, instant PDF export.",
@@ -50,7 +50,7 @@ function Builder() {
             <div className="w-9 h-9 rounded-xl gradient-primary glow-primary flex items-center justify-center">
               <Sparkles className="w-5 h-5 text-white" />
             </div>
-            <span className="font-semibold tracking-tight">LumeCV</span>
+            <span className="font-semibold tracking-tight">BKVS</span>
           </Link>
           <div className="flex items-center gap-2">
             <Link to="/">
