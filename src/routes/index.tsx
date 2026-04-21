@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "LumeCV — Build Your Professional Resume in Minutes" },
+      { title: "BKVS — Build Your Professional Resume in Minutes" },
       {
         name: "description",
         content:
@@ -31,7 +31,7 @@ function Index() {
           <div className="w-9 h-9 rounded-xl gradient-primary glow-primary flex items-center justify-center">
             <Sparkles className="w-5 h-5 text-white" />
           </div>
-          <span className="text-xl font-semibold tracking-tight">LumeCV</span>
+          <span className="text-xl font-semibold tracking-tight">BKVS</span>
         </div>
         <Link to="/builder">
           <Button variant="outline" className="rounded-xl">
@@ -71,9 +71,10 @@ function Index() {
               View Sample
             </Button>
           </div>
-          <div className="mt-10 flex items-center gap-6 text-sm text-muted-foreground">
-            <div>⭐ 4.9 / 5 Rating</div>
-            <div>50k+ Resumes Built</div>
+          <div className="mt-10 flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
+            <span className="glass rounded-full px-3 py-1.5">⚡ Live Preview</span>
+            <span className="glass rounded-full px-3 py-1.5">🎯 Role-Aware Skills Coach</span>
+            <span className="glass rounded-full px-3 py-1.5">📄 1-Click PDF</span>
           </div>
         </div>
 
@@ -162,7 +163,7 @@ function Index() {
       </section>
 
       <footer className="border-t border-border py-6 text-center text-xs text-muted-foreground">
-        © {new Date().getFullYear()} LumeCV — Crafted for ambitious careers.
+        © {new Date().getFullYear()} BKVS — Crafted for ambitious careers.
       </footer>
     </div>
   );
