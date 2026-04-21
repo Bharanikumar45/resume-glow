@@ -35,7 +35,7 @@ function Index() {
             className="h-10 w-auto rounded-lg object-contain glow-primary"
           />
         </div>
-        <Link to="/builder">
+        <Link to="/builder" search={{ sample: undefined }}>
           <Button variant="outline" className="rounded-xl">
             Open Builder
           </Button>
