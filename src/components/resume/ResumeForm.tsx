@@ -528,10 +528,10 @@ function Card({
   );
 }
 
-function Field({ label, children }: { label: string; children: React.ReactNode }) {
+function Field({ label: labelText, children }: { label: string; children: React.ReactNode }) {
   return (
     <div>
-      <Label className="text-xs text-muted-foreground mb-1 block">{label}</Label>
+      <Label className="text-xs text-muted-foreground mb-1 block">{labelText}</Label>
       {children}
     </div>
   );
