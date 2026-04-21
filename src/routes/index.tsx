@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, FileCheck2, LayoutTemplate, FileDown, Sparkles, Target, GraduationCap } from "lucide-react";
+import { ArrowRight, FileCheck2, FileDown, Sparkles, Target, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
