@@ -5,6 +5,17 @@ import { Button } from "@/components/ui/button";
 import { ResumeForm } from "@/components/resume/ResumeForm";
 import { ResumePreview } from "@/components/resume/ResumePreview";
 import { emptyResume, type ResumeData } from "@/lib/resume-types";
+
+const blankResume: ResumeData = {
+  personal: { fullName: "", phone: "", email: "", linkedin: "", portfolio: "", location: "", photo: "" },
+  targetPosition: "",
+  summary: "",
+  education: [],
+  skills: [],
+  experience: [],
+  projects: [],
+  certifications: [],
+};
 import { exportResumePdf } from "@/lib/export-pdf";
 import bkvsLogo from "@/assets/bkvs-logo.png";
 
