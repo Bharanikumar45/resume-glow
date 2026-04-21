@@ -1,11 +1,12 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useRef, useState } from "react";
-import { ArrowLeft, Download, Sparkles, Loader2 } from "lucide-react";
+import { ArrowLeft, Download, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ResumeForm } from "@/components/resume/ResumeForm";
 import { ResumePreview } from "@/components/resume/ResumePreview";
 import { emptyResume, type ResumeData } from "@/lib/resume-types";
 import { exportResumePdf } from "@/lib/export-pdf";
+import bkvsLogo from "@/assets/bkvs-logo.png";
 
 export const Route = createFileRoute("/builder")({
   head: () => ({
@@ -47,10 +48,11 @@ function Builder() {
       <header className="sticky top-0 z-30 backdrop-blur-xl bg-background/60 border-b border-border">
         <div className="max-w-[1600px] mx-auto px-4 md:px-6 py-3 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-xl gradient-primary glow-primary flex items-center justify-center">
-              <Sparkles className="w-5 h-5 text-white" />
-            </div>
-            <span className="font-semibold tracking-tight">BKVS</span>
+            <img
+              src={bkvsLogo}
+              alt="BKVS logo"
+              className="h-9 w-auto rounded-lg object-contain glow-primary"
+            />
           </Link>
           <div className="flex items-center gap-2">
             <Link to="/">
