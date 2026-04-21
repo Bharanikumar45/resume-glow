@@ -65,13 +65,15 @@ function Index() {
                 Start Building <ArrowRight className="w-4 h-4 ml-1" />
               </Button>
             </Link>
-            <Button
-              size="lg"
-              variant="outline"
-              className="rounded-xl h-12 border-border bg-transparent"
-            >
-              View Sample
-            </Button>
+            <Link to="/builder" search={{ sample: 1 }}>
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-xl h-12 border-border bg-transparent"
+              >
+                View Sample
+              </Button>
+            </Link>
           </div>
           <div className="mt-10 flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
             <span className="glass rounded-full px-3 py-1.5">⚡ Live Preview</span>
