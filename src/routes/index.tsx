@@ -35,7 +35,7 @@ function Index() {
             className="h-10 w-auto rounded-lg object-contain glow-primary"
           />
         </div>
-        <Link to="/builder">
+        <Link to="/builder" search={{ sample: undefined }}>
           <Button variant="outline" className="rounded-xl">
             Open Builder
           </Button>
@@ -57,7 +57,7 @@ function Index() {
             Live preview, smart formatting, and instant PDF export.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link to="/builder">
+            <Link to="/builder" search={{ sample: undefined }}>
               <Button
                 size="lg"
                 className="rounded-xl gradient-primary text-white border-0 px-7 h-12 hover:opacity-95 animate-pulse-glow"
@@ -65,13 +65,15 @@ function Index() {
                 Start Building <ArrowRight className="w-4 h-4 ml-1" />
               </Button>
             </Link>
-            <Button
-              size="lg"
-              variant="outline"
-              className="rounded-xl h-12 border-border bg-transparent"
-            >
-              View Sample
-            </Button>
+            <Link to="/builder" search={{ sample: 1 }}>
+              <Button
+                size="lg"
+                variant="outline"
+                className="rounded-xl h-12 border-border bg-transparent"
+              >
+                View Sample
+              </Button>
+            </Link>
           </div>
           <div className="mt-10 flex flex-wrap items-center gap-3 text-xs text-muted-foreground">
             <span className="glass rounded-full px-3 py-1.5">⚡ Live Preview</span>
@@ -153,7 +155,7 @@ function Index() {
           <p className="text-muted-foreground mb-6">
             Build a recruiter-friendly resume in under 5 minutes.
           </p>
-          <Link to="/builder">
+          <Link to="/builder" search={{ sample: undefined }}>
             <Button
               size="lg"
               className="rounded-xl gradient-primary text-white border-0 px-7 h-12"

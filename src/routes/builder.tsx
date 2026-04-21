@@ -5,10 +5,24 @@ import { Button } from "@/components/ui/button";
 import { ResumeForm } from "@/components/resume/ResumeForm";
 import { ResumePreview } from "@/components/resume/ResumePreview";
 import { emptyResume, type ResumeData } from "@/lib/resume-types";
+
+const blankResume: ResumeData = {
+  personal: { fullName: "", phone: "", email: "", linkedin: "", portfolio: "", location: "", photo: "" },
+  targetPosition: "",
+  summary: "",
+  education: [],
+  skills: [],
+  experience: [],
+  projects: [],
+  certifications: [],
+};
 import { exportResumePdf } from "@/lib/export-pdf";
 import bkvsLogo from "@/assets/bkvs-logo.png";
 
 export const Route = createFileRoute("/builder")({
+  validateSearch: (search: Record<string, unknown>) => ({
+    sample: search.sample === 1 || search.sample === "1" ? 1 : undefined,
+  }),
   head: () => ({
     meta: [
       { title: "Resume Builder — BKVS" },
@@ -27,7 +41,10 @@ export const Route = createFileRoute("/builder")({
 });
 
 function Builder() {
-  const [data, setData] = useState<ResumeData>(emptyResume);
+  const { sample } = Route.useSearch();
+  const [data, setData] = useState<ResumeData>(
+    sample ? emptyResume : blankResume,
+  );
   const [exporting, setExporting] = useState(false);
   const previewRef = useRef<HTMLDivElement>(null);
 
