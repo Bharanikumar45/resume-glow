@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
-import { ArrowRight, FileCheck2, LayoutTemplate, FileDown, Sparkles } from "lucide-react";
+import { ArrowRight, FileCheck2, LayoutTemplate, FileDown, Sparkles, Target, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/")({
@@ -187,9 +187,14 @@ const features = [
     desc: "Clean structure that parses perfectly through every applicant tracking system.",
   },
   {
-    icon: LayoutTemplate,
-    title: "Modern Templates",
-    desc: "Professional, minimalist designs trusted by recruiters at top companies.",
+    icon: Target,
+    title: "Role-Aware Skill Match",
+    desc: "Tell us the position you're targeting — we'll score your skills against it instantly.",
+  },
+  {
+    icon: GraduationCap,
+    title: "Direct Course Links",
+    desc: "Missing a skill? Get curated, direct links to the best courses to close the gap.",
   },
   {
     icon: Sparkles,
