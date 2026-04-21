@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 import { ArrowRight, FileCheck2, FileDown, Sparkles, Target, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import bkvsLogo from "@/assets/bkvs-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -28,10 +29,11 @@ function Index() {
       {/* Nav */}
       <header className="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="w-9 h-9 rounded-xl gradient-primary glow-primary flex items-center justify-center">
-            <Sparkles className="w-5 h-5 text-white" />
-          </div>
-          <span className="text-xl font-semibold tracking-tight">BKVS</span>
+          <img
+            src={bkvsLogo}
+            alt="BKVS logo"
+            className="h-10 w-auto rounded-lg object-contain glow-primary"
+          />
         </div>
         <Link to="/builder">
           <Button variant="outline" className="rounded-xl">
