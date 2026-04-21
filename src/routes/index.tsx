@@ -12,7 +12,7 @@ export const Route = createFileRoute("/")({
         content:
           "Create a clean, ATS-friendly resume that attracts recruiters and top companies. Live preview, instant PDF export.",
       },
-      { property: "og:title", content: "LumeCV — Modern ATS Resume Builder" },
+      { property: "og:title", content: "BKVS — Modern ATS Resume Builder" },
       {
         property: "og:description",
         content: "Recruiter-ready resumes in minutes. Live preview, instant PDF export.",

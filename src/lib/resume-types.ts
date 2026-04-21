@@ -41,6 +41,7 @@ export interface Certification {
 
 export interface ResumeData {
   personal: PersonalInfo;
+  targetPosition: string;
   summary: string;
   education: Education[];
   skills: string[];
@@ -59,6 +60,7 @@ export const emptyResume: ResumeData = {
     location: "San Francisco, CA",
     photo: "",
   },
+  targetPosition: "Frontend Developer",
   summary:
     "Results-driven Software Engineer with 5+ years building scalable web applications. Expertise in React, Node.js, and cloud architecture. Proven track record of shipping products used by millions.",
   education: [
