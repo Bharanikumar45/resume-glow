@@ -29,14 +29,18 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Resume_Builder" },
+      { name: "description", content: "BKVS is a modern resume builder web app that generates recruiter-friendly, ATS-optimized resumes." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Resume_Builder" },
+      { property: "og:description", content: "BKVS is a modern resume builder web app that generates recruiter-friendly, ATS-optimized resumes." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Resume_Builder" },
+      { name: "twitter:description", content: "BKVS is a modern resume builder web app that generates recruiter-friendly, ATS-optimized resumes." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d3ab018a-92cb-4c4a-a9c4-93ed8092fa42/id-preview-88917294--afe6e2ef-e5db-4076-81a3-cb70eda759fd.lovable.app-1776793014696.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/d3ab018a-92cb-4c4a-a9c4-93ed8092fa42/id-preview-88917294--afe6e2ef-e5db-4076-81a3-cb70eda759fd.lovable.app-1776793014696.png" },
     ],
     links: [
       {
