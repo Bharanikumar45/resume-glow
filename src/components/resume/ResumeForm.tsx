@@ -1,10 +1,11 @@
 import { useRef } from "react";
-import { Plus, Trash2, Upload, X } from "lucide-react";
+import { Trash2, Upload, X, Target } from "lucide-react";
 import type { ResumeData } from "@/lib/resume-types";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
+import { SkillsAdvisor } from "@/components/resume/SkillsAdvisor";
+import { SUGGESTED_ROLES } from "@/lib/skills-advisor";
 
 interface Props {
   data: ResumeData;
