@@ -57,7 +57,7 @@ function Index() {
             Live preview, smart formatting, and instant PDF export.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link to="/builder">
+            <Link to="/builder" search={{ sample: undefined }}>
               <Button
                 size="lg"
                 className="rounded-xl gradient-primary text-white border-0 px-7 h-12 hover:opacity-95 animate-pulse-glow"
@@ -155,7 +155,7 @@ function Index() {
           <p className="text-muted-foreground mb-6">
             Build a recruiter-friendly resume in under 5 minutes.
           </p>
-          <Link to="/builder">
+          <Link to="/builder" search={{ sample: undefined }}>
             <Button
               size="lg"
               className="rounded-xl gradient-primary text-white border-0 px-7 h-12"
